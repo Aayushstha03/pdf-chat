@@ -1,8 +1,8 @@
 # langchain ko built in embeddings class
-from langchain_community.embeddings.ollama import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 
 # langchain class to handle chrome db creation and stuffs
-from langchain_community.vectorstores.chroma import Chroma
+from langchain_chroma import Chroma
 
-def get_embeddings():
+def get_embedding_function():
     return OllamaEmbeddings(model="nomic-embed-text")
