@@ -34,7 +34,7 @@ def query_rag(query_text: str):
 
     # Search the DB.
     # k controls the number of results to return
-    results = db.similarity_search_with_score(query_text, k=3)
+    results = db.similarity_search_with_score(query_text, k=5)
 
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
@@ -44,7 +44,7 @@ def query_rag(query_text: str):
     model = OllamaLLM(model="llama3.2")
     response_text = model.invoke(prompt)
 
-    sources = [doc.metadata.get("id", None) for doc in results]
+    sources = [doc.metadata.get("id", None) for doc, _score in results]
     formatted_response = f"Response: {response_text}\nSources: {sources}"
     print(formatted_response)
     return response_text
