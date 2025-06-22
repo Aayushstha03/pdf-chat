@@ -1438,6 +1438,7 @@ dependencies = [
     { name = "langchain-chroma" },
     { name = "langchain-community" },
     { name = "langchain-ollama" },
+    { name = "ollama" },
     { name = "pypdf" },
     { name = "pytest" },
 ]
@@ -1449,6 +1450,7 @@ requires-dist = [
     { name = "langchain-chroma", specifier = ">=0.2.4" },
     { name = "langchain-community", specifier = ">=0.3.26" },
     { name = "langchain-ollama", specifier = ">=0.3.3" },
+    { name = "ollama", specifier = ">=0.5.1" },
     { name = "pypdf", specifier = ">=5.6.0" },
     { name = "pytest", specifier = ">=8.4.1" },
 ]
