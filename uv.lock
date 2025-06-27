@@ -501,6 +501,23 @@ wheels = [
 ]
 
 [[package]]
+name = "firecrawl-py"
+version = "2.12.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aiohttp" },
+    { name = "nest-asyncio" },
+    { name = "pydantic" },
+    { name = "python-dotenv" },
+    { name = "requests" },
+    { name = "websockets" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8a/ec/6b9e261acb9dd36eb06b9863c85c71a24fa7d4acc8c3faa553ffc773183c/firecrawl_py-2.12.0.tar.gz", hash = "sha256:82bd1fb8553ac2d0bff26dad69ccf1bc9fba22bcd138264b9ec4891f41fdf17d", size = 39514, upload-time = "2025-06-27T15:04:01.568Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/50/0f/8a87fc2a116fb05b0cf8d4ef605317427da3f1de18de7cf4f93850c50bc9/firecrawl_py-2.12.0-py3-none-any.whl", hash = "sha256:865642592e87e4561a463df61883e383307740573f01e65dcda5689b889d5f8a", size = 39490, upload-time = "2025-06-27T15:04:00.135Z" },
+]
+
+[[package]]
 name = "flatbuffers"
 version = "25.2.10"
 source = { registry = "https://pypi.org/simple" }
@@ -1633,6 +1650,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "chromadb" },
+    { name = "firecrawl-py" },
     { name = "ipykernel" },
     { name = "langchain" },
     { name = "langchain-chroma" },
@@ -1646,6 +1664,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "chromadb", specifier = ">=1.0.13" },
+    { name = "firecrawl-py", specifier = ">=2.12.0" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "langchain", specifier = ">=0.3.26" },
     { name = "langchain-chroma", specifier = ">=0.2.4" },
